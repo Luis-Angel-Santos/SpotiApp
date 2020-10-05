@@ -15,9 +15,7 @@ getNewReleases(){
       'Authorization': 'Bearer BQBTKHBAQzf0h4WTFeiDABt8-PRnTDkaQN37Ey_x_KfQrxkfQD95vCwN0imPfFOLbMQ3ASa7-7NbFCxIxEc'
     });
     
-    this.http.get('https://api.spotify.com/v1/browse/new-releases', {headers})
-      .subscribe(data=>{
-        console.log(data);
-      });
+    return this.http.get('https://api.spotify.com/v1/browse/new-releases', {headers});
+  
   }
 }
